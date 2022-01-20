@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document. One function IF. Do. toUpperCase </title>
+</head>
+<style>
+    body {
+
+        width: 1300px;
+        background: #e6ecff;
+        padding: 15px;
+        padding-right: 18px;
+        border: solid 3px green;
+        border-radius: 10px;
+        margin: 50px auto;
+        font-family: "Times New Roman";
+        /*Тип шрифта */
+        font-size: 18px;
+        /* Размер шрифта*/
+    }
+
+    h1 {
+        background-color: yellow;
+        font-style: italic;
+        line-height: 1.5em;
+        font-family: "Helvetica", sans-serif;
+    }
+
+    h3 {
+        color: purple;
+        font-weight: bold;
+    }
+
+    h2 {
+        background-color: #e6ecff;
+        color: rgb(0, 128, 85);
+        font-weight: bold;
+
+    }
+
+    p {
+        color: red;
+        font-style: bold;
+    }
+
+    button {
+        background-color: #4CAF50;
+        /* Green */
+        border: 2px solid #af4c82;
+        border-radius: 8px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <div id="fif">
+        <h1> Funcion if, do, aggr, toUpperCase </h1>
+        <fieldset>
+            <!-- START funcion IF-->
+
+            <h2> One function if</h2>
+            <h3>
+                <pre>
+                    let s = 80;
+                    let p = 13;
+                
+                    if (s >= p) {
+                        x = s - p;
+                    } else {
+                        x = s + p;
+                    }
+                    //return x;
+                    console.log(x);
+                   
+
+            </pre>
+                <p id="demo"> </p>
+                <button onclick="fif()">START FUNCTION IF</button>
+                <button type="reset" onclick="location.reload(); return false;">RESET</button>
+            </h3>
+
+        </fieldset>
+    </div>
+    <!--End function IF-->
+    <!--  Funcion DO-->
+    <br>
+    <div id="fdo">
+        <fieldset>
+            <!--START function DO-->
+            <h2> Function do</h2>
+            <h3>
+                <pre>
+                    do {
+                        alert("Hi!");
+                        i++;
+                    } while (i < 10);
+        
+                </pre>
+            </h3>
+            <p id="demo1"></p>
+            <button onclick="fdo()">START FUNCTION DO</button>
+
+        </fieldset>
+        <!--END function DO-->
+    </div>
+    <br>
+    <!-- START Funcion AGGR-->
+    <div id="fagg">
+        <fieldset>
+            <h2> Function aggr </h2>
+            <h3>
+                <pre>
+                    let a = [4, 8, 99, 56, 2].reduce(function (aggr, val) {
+                        return aggr + val;
+                    }, 0);
+                    console.log(a);
+                </pre>
+            </h3>
+            <button onclick="faggr()">START FUNCTION AGGR</button>
+        </fieldset>
+    </div>
+    <br>
+    <!--END function aggr-->
+    <div id="ftuc">
+        <fieldset>
+            <h2> Function toUpperCase</h2>
+            <h3>
+                <pre>
+
+                    let a1 = "Hello World";
+                    let b1 = a1.toUpperCase(); //ключевое слово для перевода в заглавные буквы
+                    
+                        console.log(b1);
+                         
+                </pre>
+            </h3>
+            <p id="demo2"></p>
+            <button onclick="ftuc()"> START toUpperCase</button>
+            <button type="reset" onclick="location.reload(); return false;">RESET</button>
+        </fieldset>
+
+    </div>
+</body>
+<!-- Function IF-->
+<script>
+    // 
+    let s = 80;
+    let p = 13;
+
+    if (s >= p) {
+        x = s - p;
+    } else {
+        x = s + p;
+    }
+    //return x;
+
+    //for out
+    function fif() {
+        console.log(x);
+        document.getElementById("demo").innerHTML = x;
+    }
+</script>
+<!-- Function DO   -->
+<script>
+    let i = 0;
+
+    function fdo() {
+        do {
+            alert("Hi! Click me 10 taim! ");
+            i++;
+        } while (i < 10);
+    }
+</script>
+<!-- Function aggr -->
+<script>
+    let a = [4, 8, 99, 56, 2].reduce(function (aggr, val) {
+        return aggr + val;
+    }, 0);
+
+    function faggr() {
+        console.log(a);
+        alert('Summ arr a is ' + a);
+    }
+</script>
+<!-- toUpperCaxhe -->
+<script>
+    let a1 = "Hello World";
+    let b1 = a1.toUpperCase(); //ключевое слово для перевода в заглавные буквы
+    function ftuc() {
+        console.log(b1);
+        document.getElementById("demo2").innerHTML = b1;
+    }
+</script>
+
+</html>
